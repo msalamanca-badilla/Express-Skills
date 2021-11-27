@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SKILLS</title>
+    <link rel='stylesheet' href='/stylesheets/skills/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class = 'nav'>
+        <a href="/">HOME</a>
+      </div>
+      <div class='item'>
+        <h2>MY DEVELOPER SKILLS</h2>
+        <h3>SKILLS AS OF <%= time %></h3>
+      </div>
+      <div class = 'skilllist'>
+      <ul>
+        <% skills.forEach(function(s) { 
+          console.log(s.skill, s.id)
+          %>
+          <li>
+            <form action="/skills/<%= s.id %>?_method=DELETE"
+              class="delete-form" method="POST">
+              <br><button type="submit">X</button>
+            </form>
+            <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+            <%= s.skills %>
+              :
+            <%= s.done ? 'DONE' :'NOT DONE' %>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+        <a id = "skilladd" href="/skills/new">ADD SKILLS</a>
+    </div>
+  </body>
+</html>

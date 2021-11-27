@@ -1,0 +1,65 @@
+.container{
+  display: grid;
+  grid-template-rows: 70px 100px 1fr 80px;
+  border: 2px solid black;
+}
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav{
+  text-align: center;
+  background-color: #377673;
+  border-bottom: 2px solid black;
+}
+
+.item{
+  padding: 15px 0 0 0;
+  grid-row-start: 3;
+}
+
+h4{
+  margin: 0 0 0 50px;
+}
+
+button{
+  margin: 20px 0 50px 50px;
+  background-color: #fed08e;
+  font-size: 15px;
+  height: 40px;
+  width: 150px;
+  border-radius: 30px;
+  border-style: solid;
+}
+
+button a{
+  text-decoration: none;
+}
+
+.lowerbar{
+  background-color: #377673;
+  grid-row-start: 4;
+  border-top: 2px solid black;
+}
+
+.summary{
+  grid-row-start: 2;
+}
+.developerskills{
+  margin: 0 0 0 50px;
+  font-size: 40px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color: white;
+}
